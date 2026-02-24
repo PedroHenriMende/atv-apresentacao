@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Industrial - Dashboard</title>
+    <link rel="stylesheet" href="../css/stylePrincipal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="logo-area">
+            <img src="../assets/img/logo trabalho.png" alt="SOS Industrial Logo">
+        </div>
+        <nav class="top-nav">
+            <a href="./index.html" class="active">Início</a>
+            <a href="./principal.html">Ordens de Serviços</a>
+            <div class="nav-icons">
+                <i class="fa-regular fa-bell"></i>
+                <div class="user-profile">
+                    <img src="../assets/img/icon.webp" alt=>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <section class="welcome-section">
+            <h1>Olá, Técnico!</h1>
+            <p>Gerencie suas <strong>Ordens de Serviço</strong></p>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon green"><i class="fa-solid fa-check"></i></div>
+                <div class="stat-info">
+                    <h2>8 ABERTAS</h2>
+                    <p>Ordens em aberto</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange"><i class="fa-regular fa-clock"></i></div>
+                <div class="stat-info">
+                    <h2 class="orange-text">2 EM ANDAMENTO</h2>
+                    <p>Ordens sendo executadas</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon red"><i class="fa-solid fa-check"></i></div>
+                <div class="stat-info">
+                    <h2 class="red-text">5 CONCLUÍDAS</h2>
+                    <p>Ordens finalizadas hoje</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content-grid">
+            
+            <div class="left-column">
+                <div class="section-header">
+                    <h2>Ordens de Serviço</h2>
+                    <div class="search-filter">
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Buscar por operador...">
+                        </div>
+                        <button class="btn-filter"><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                </div>
+
+                <div class="tabs-area">
+                    <div class="tabs">
+                        <button class="tab active" onclick="switchTab(this)">Pendentes</button>
+                        <button class="tab" onclick="switchTab(this)">Em Andamento</button>
+                        <button class="tab" onclick="switchTab(this)">Concluídas</button>
+                    </div>
+                    <button class="btn-new-os" onclick="window.location.href='final.html'">Nova OS <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+                <div class="os-list">
+                    <div class="os-card">
+                        <div class="os-card-header">
+                            <span class="badge critical">Crítica</span>
+                            <strong>#2025-032</strong>
+                            <span class="os-time">Hoje, 16:20 <i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                        <div class="os-card-body">
+                            <img src="../assets/img/imgFresa3.jpg" alt="Máquina">
+                            <div class="os-details">
+                                <p class="os-location">Planta Sul - Linha de Manutenção 0.1</p>
+                                <p class="os-machine">Modelo Torno Mecânico - 032-TRN</p>
+                                <p class="os-desc">Máquina não liga, verificado curto-circuito.</p>
+                            </div>
+                            <button class="btn-view-os" onclick="window.location.href='os-details.html'">Ver OS <i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="os-card">
+                        <div class="os-card-header">
+                            <span class="badge medium">Média</span>
+                            <strong>#2025-031</strong>
+                            <span class="os-time">Ontem, 14:55 <i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                        <div class="os-card-body">
+                            <img src="../assets/img/imgFresa2.webp" alt="Máquina">
+                            <div class="os-details">
+                                <p class="os-location">Planta Norte - Área de Embalagem</p>
+                                <p class="os-machine">Compressor de Ar CS-8505</p>
+                                <p class="os-desc">Vazamento de ar próximo à válvula.</p>
+                            </div>
+                            <button class="btn-view-os" onclick="window.location.href='os-details.html'">Ver OS <i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="os-card">
+                        <div class="os-card-header">
+                            <span class="badge low">Baixa</span>
+                            <strong>#2025-029</strong>
+                        </div>
+                        <div class="os-card-body">
+                            <img src="../assets/img/imgFresa.jpg" alt="Máquina">
+                            <div class="os-details">
+                                <p class="os-location">Planta Oeste - Linha de Encaixe 03</p>
+                                <p class="os-machine">Esteira Transportadora MO-270</p>
+                                <p class="os-desc">Correia com desgaste e desalinhamento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                
+                <div class="widget-card calendar-widget">
+                    <div class="calendar-header">
+                        <h3>Calendário</h3>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="calendar-grid">
+                        <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+                        <span class="muted">28</span><span class="muted">29</span><span class="muted">30</span><span>1</span><span>2</span><span>3</span><span>4</span>
+                        <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+                        <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+                        <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span class="active-day">24</span><span>25</span>
+                        <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span class="muted">1</span>
+                    </div>
+                </div>
+
+                <div class="widget-card quick-actions-widget">
+                    <h3>Atalhos Rápidos</h3>
+                    <button class="btn-action green-btn" onclick="window.location.href='final.html'">Nova OS <i class="fa-solid fa-chevron-right"></i></button>
+                    <button class="btn-action blue-btn"><i class="fa-solid fa-qrcode"></i> Scanner QR Code</button>
+                    <button class="btn-action gray-btn"><i class="fa-regular fa-folder-open"></i> Histórico de OS</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../script/scriptPrincipal.js"></script>
+</body>
+</html>

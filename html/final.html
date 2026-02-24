@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Industrial - Execução de Manutenção</title>
+    <link rel="stylesheet" href="../css/stylefinal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="logo-area">
+            <img src="../assets/img/logo trabalho.png" alt="SOS Industrial Logo">
+        </div>
+        <nav class="top-nav">
+            <a href="principal.html">Início</a>
+            <a href="#" class="active">Ordens de Serviços</a>
+            <div class="nav-icons">
+                <i class="fa-regular fa-bell"></i>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Perfil" style="border-radius: 50%; object-fit: cover; width: 35px; height: 35px;">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-container">
+        <a href="principal.html"><i class="fa-solid fa-house"></i></a>
+        <span>></span>
+        <a href="../html/principal.html">Ordens de Serviços</a>
+        <span>></span>
+        <span class="current-page">Execução de Manutenção</span>
+    </div>
+
+    <main class="os-details-container">
+        
+        <header class="os-header-info">
+            <h1>#2025-032</h1>
+            <p>Planta Sul - Linha de Manutenção 0.1</p>
+        </header>
+
+        <section class="os-form-card">
+            
+            <div class="form-section">
+                <h3 class="section-title">Equipamento</h3>
+                <div class="equipment-info">
+                    <img src="../assets/img/torno.webp" alt="Torno Mecânico">
+                    <div class="equipment-details">
+                        <h4>Modelo Torno Mecânico - 032-TRN</h4>
+                        <p>Série: 2032.32.1.1342</p>
+                    </div>
+                    <button class="btn-manual">Manual Técnico (PDF)</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-section">
+                <h3 class="section-title">Relato do Problema</h3>
+                <div class="task-timer-row">
+                    <div class="checklist">
+                        <label class="check-item">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Verificação de voltagem
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Lubrificação de eixos
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Troca de correia
+                        </label>
+                    </div>
+
+                    <div class="timer-widget">
+                        <button class="btn-play-timer" id="playTimer"><i class="fa-solid fa-play"></i></button>
+                        <span id="timerDisplay">00:00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-section">
+                <h3 class="section-title">Evidências</h3>
+                <div class="evidence-row">
+                    <button class="btn-add-photo"><i class="fa-solid fa-plus"></i> Adicionar Foto / Vídeo</button>
+                    <div class="evidence-photos">
+                        <div class="photo-thumb">
+                            <span class="photo-label">ANTES</span>
+                            <img src="../assets/img/imgFresa3.jpg" alt="Antes">
+                        </div>
+                        <div class="photo-thumb">
+                            <span class="photo-label">DEPOIS</span>
+                            <img src="../assets/img/imgFresa.jpg" alt="Depois">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-section">
+                <h3 class="section-title">Observações</h3>
+                <input type="text" class="obs-input" placeholder="Descreva as observações...">
+            </div>
+
+            <hr>
+
+            <div class="form-section">
+                <h3 class="section-title">Assinatura do Cliente</h3>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <canvas id="signatureCanvas" width="500" height="150" style="border: 1px solid #ccc; border-radius: 4px; background: #fff; width: 100%; touch-action: none; cursor: crosshair;"></canvas>
+                    <button type="button" id="clearSignature" style="align-self: flex-start; padding: 8px 15px; background: #e9ecef; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; font-weight: 600;">Limpar Assinatura</button>
+                </div>
+            </div>
+
+            <button class="btn-finalizar-os">Finalizar OS</button>
+        </section>
+
+    </main>
+
+    <script src="../script/scriptFinal.js"></script>
+</body>
+</html>
